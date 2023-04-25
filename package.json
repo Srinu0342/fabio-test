@@ -1,0 +1,17 @@
+{
+  "name": "fabio-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "pip install -r requirements.txt",
+    "install-client": "cd client && npm install",
+    "start": "concurrently \"yarn client\" \"yarn server\"",
+    "client": "cd client && yarn start",
+    "server": "python server/app.py"
+  },
+  "author": "Srinu0342 <subhadip1997hazra@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
