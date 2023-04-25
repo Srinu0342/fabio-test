@@ -50,11 +50,6 @@ cd ..
 yarn start
 ```
 
-## Curl
-To Have the Data setup and fetched from backend run the curl below
-```
-```
-
 ## Improvements and Scopes
 The different endpoints to add more card items, edit card details and delete cards are already created
 The db could have been wrapped in document based db incase we try to implement multiple board showcases
@@ -64,3 +59,57 @@ Both FE and BE could have been wrapped with type checkings
 DB Migrations should be used with Alembic or maybe flask-migrartions could be used
 Unit tests can be added for Backend as there are multiple logics that would require testing and use based documentation
 Pre commit hook can be added for type and lint checks and fixes
+
+## Curl
+To Have the Data setup and fetched from backend run the curl below
+# 1
+```
+curl --location --request POST 'http://localhost:8080/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "bank-draft",
+    "title": "Bank Draft",
+    "link": "https://placekitten.com/g/200/200"
+}'
+```
+# 2
+```
+curl --location --request POST 'http://localhost:8080/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "bill-of-lading",
+    "title": "Bill of Lading",
+    "link": "https://placekitten.com/g/201/201"
+}'
+```
+# 3
+```
+curl --location --request POST 'http://localhost:8080/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "invoice",
+    "title": "Invoice",
+    "link": "https://placekitten.com/g/202/202"
+}'
+```
+# 4
+```
+curl --location --request POST 'http://localhost:8080/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "bank-draft-2",
+    "title": "Bank Draft 2",
+    "link": "https://placekitten.com/g/203/203"
+}'
+```
+# 5
+```
+curl --location --request POST 'http://localhost:8080/create' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "type": "bill-of-lading-2",
+    "title": "Bill of Lading 2",
+    "link": "https://placekitten.com/g/204/204"
+}'
+```
+
