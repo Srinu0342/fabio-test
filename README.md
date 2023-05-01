@@ -16,6 +16,10 @@ db-compose up -d
 docker exec -it test_postgres psql -U postgres -c “create database test”
 ```
 
+## To run the complete App
+Please run the curls to get the data in DB
+
+
 ## Structure
 src/server  --backend
 src/client/src  --frontend
@@ -41,7 +45,7 @@ Backend: .env in the root folder of the app
 cd .env.example .env
 ```
 
-## Local setup
+## Local development setup
 ```
 source venv/bin/activate --- if you want to run in venv
 yarn install-server

@@ -9,5 +9,16 @@ services:
       - "5432:5432"
     volumes:
       - test_dbdata:/var/lib/postgresql/data
+  backend:
+    build: .
+    container_name: "fabio_backend"
+    ports:
+      - "8080:8080"
+  frontend:
+    build: 
+      context: ./client
+    container_name: "fabio_frontend"
+    ports:
+      - "8000:8000"
 volumes:
   test_dbdata:
